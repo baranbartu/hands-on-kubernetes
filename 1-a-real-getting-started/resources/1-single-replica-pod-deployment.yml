@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-minikube
+  name: hello-minikube
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-minikube
+  template:
+    metadata:
+      labels:
+        app: hello-minikube
+    spec:
+      containers:
+      - image: ealen/echo-server
+        name: echo-server
+        ports:
+        - containerPort: 80
+          protocol: TCP
