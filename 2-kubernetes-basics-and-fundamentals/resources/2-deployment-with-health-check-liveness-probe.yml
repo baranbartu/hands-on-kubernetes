@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-go-api-with-readiness-probe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-go-api-with-readiness-probe
+  template:
+    metadata:
+      labels:
+        app: simple-go-api-with-readiness-probe
+    spec:
+      containers:
+      - name: simple-go-api-with-readiness-probe
+        image: baranbartu/simple-go-api:v1
+        ports:
+        - name: cont-port
+          containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /version
+            port: cont-port
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
