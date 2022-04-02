@@ -12,6 +12,6 @@ Using Deployment resource a set of pods and their lifecycles can be smoothly man
 
 ## Deploying a Set of Pods with Health Checks
 
-- `kubectl create -f ../resources/2-deployment-with-health-check-readiness-probe.yml`
+- `kubectl create -f ../resources/2-deployment-with-health-check-liveness-probe.yml`
 - check pods: `kubectl get pods` 
 - describe one of the pod and check `Conditions` section: `kubectl describe pod <pod-name>`
