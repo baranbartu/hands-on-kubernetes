@@ -8,4 +8,7 @@ kubectl delete service hello-minikube
 kubectl delete deployment hello-minikube
 
 kubectl delete pod busybox
+
+# optional
+minikube stop
 ```
