@@ -1,4 +1,6 @@
-# Agenda
+# A Real Getting Started
+
+## Agenda
 
 1. [Intro and Installation](docs/0-intro-and-tools-installation.md)
 2. [Single Pod with Deployment Object](docs/1-single-pod-with-deployment-object.md)
