@@ -15,7 +15,7 @@ Using Deployment resource a set of pods and their lifecycles can be smoothly man
 - `kubectl create -f ../resources/2-deployment-with-health-check-liveness-probe.yml`
 - check pods: `kubectl get pods` 
 - describe one of the pod and check `Conditions` section: `kubectl describe pod <pod-name>`
-- While `Deployment` resource is trying to download and run the the image, `readinessProbe` waits
+- While `Deployment` resource is trying to download and run the the image, `livenessProbe` waits
   15 seconds and makes a request to `localhost:8080/version`. If response status code is 200 then
   the pods' state will be ready.
 - terminate the deployment: `kubectl delete deployment simple-go-api-with-liveness-probe`
